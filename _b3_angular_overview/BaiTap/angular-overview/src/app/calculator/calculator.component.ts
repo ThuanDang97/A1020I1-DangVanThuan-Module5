@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,9 +13,6 @@ export class CalculatorComponent {
   operator = '+';
   onFirstChange(value) {
     this.first = Number(value);
-  }
-  onSecondChange(value) {
-    this.second = Number(value);
   }
   onSelectChange(value) {
     this.operator = value;

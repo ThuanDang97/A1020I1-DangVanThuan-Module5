@@ -1,5 +1,8 @@
+// @ts-ignore
 import { BrowserModule } from '@angular/platform-browser';
+// @ts-ignore
 import { NgModule } from '@angular/core';
+// @ts-ignore
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
