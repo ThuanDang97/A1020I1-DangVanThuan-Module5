@@ -13,11 +13,12 @@ export class StudentComponent implements OnInit {
   }
 
   student1: Student = {
+    id: 1,
     name: "Thuận Đặng",
     age: 24,
     address: "Đà Nẵng",
     img : "https://upload.wikimedia.org/wikipedia/commons/a/a0/Arh-avatar.jpg",
-    mark : 1,
+    mark : 5,
   };
 
   ngOnInit() {
