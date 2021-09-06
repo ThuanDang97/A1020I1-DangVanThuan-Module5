@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Student} from "../IStudent";
 
 @Component({
@@ -12,14 +12,10 @@ export class StudentComponent implements OnInit {
   constructor() {
   }
 
-  student1: Student = {
-    id: 1,
-    name: "Thuận Đặng",
-    age: 24,
-    address: "Đà Nẵng",
-    img : "https://upload.wikimedia.org/wikipedia/commons/a/a0/Arh-avatar.jpg",
-    mark : 5,
-  };
+  @Input()
+  student1 : Student | any;
+
+  // @Output
 
   ngOnInit() {
 

@@ -1,12 +1,17 @@
-<div class="card" style="width:400px; text-align: center">
-  <img class="card-img-top" [src]="student1.img" alt="Card image">
-  <div class="card-body">
-    <h4 class="card-title">{{student1.name}}</h4>
-    <p>age: {{student1.age}}</p>
-    <p>address: {{student1.address}}</p>
-    <p>mark: {{student1.mark}}</p>
-  </div>
+<div style="text-align: center; padding-left: 30%">
+  <div class="card align-content-center align-items-center" style="width:400px; text-align: center">
+    <img class="card-img-top" [src]="student1.img" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">{{student1.name | titlecase}}</h4>
+      <p>age: {{student1.age}}</p>
+      <p>address: {{student1.address}}</p>
+      <p>mark: {{student1.mark}}</p>
+    </div>
 
-  <span>Change Mark: <input type="number" (change)="changeMark($any($event).target.value)"></span>
+    <span>Change Mark: <input type="number" (change)="changeMark($any($event).target.value)"></span>
+  </div>
 </div>
 
+<div class="mt-5">
+
+</div>

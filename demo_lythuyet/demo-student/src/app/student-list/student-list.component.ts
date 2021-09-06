@@ -11,11 +11,18 @@ export class StudentListComponent implements OnInit {
 
   constructor() { }
 
-  student1 : Student[] = StudentData;
+  students : Student[] = StudentData;
+
+  student : any;
 
   ngOnInit(): void {
   }
 
 
+  sendInfoStudent(student : Student) {
 
+    console.log(student);
+    this.student = student;
+
+  }
 }

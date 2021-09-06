@@ -11,8 +11,8 @@
       <th>Action</th>
     </tr>
     </thead>
-    <tbody >
-    <tr *ngFor="let student of student1">
+    <tbody>
+    <tr *ngFor="let student of students">
       <td>{{student.id}}</td>
       <td>{{student.name | titlecase }}</td>
       <td>{{student.age}}</td>
@@ -21,13 +21,17 @@
       <td *ngIf="student.mark >= 5" [ngStyle]="{'color': 'green'}">PASS</td>
       <td *ngIf="student.mark < 5" [ngStyle]="{'color': 'red'}">FAIL</td>
       <td>
-        <button class="btn btn-primary">Detail</button>
+        <button class="btn btn-primary" (click)="sendInfoStudent(student)">Detail
+        </button>
         <span>&nbsp;</span>
         <button class="btn btn-danger">Delete</button>
       </td>
     </tr>
     </tbody>
   </table>
-  <app-student></app-student>
 </div>
+<app-student
+  [student1]="student"
+
+></app-student>
 
