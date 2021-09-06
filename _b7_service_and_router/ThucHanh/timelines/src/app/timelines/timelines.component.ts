@@ -5,7 +5,7 @@ import { DateUtilService } from '../date-util.service';
 @Component({
   selector: 'app-timelines',
   templateUrl: './timelines.component.html',
-  styleUrls: ['./timelines.component.scss']
+  styleUrls: ['./timelines.component.css']
 })
 export class TimelinesComponent implements OnInit {
   output = '';
