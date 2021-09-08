@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'countdown';
+  countdownMsg = '';
+  countdownAliasMsg = '';
+  finishCountdown() {
+    this.countdownMsg = 'Finished!';
+  }
+
+  endCountdown() {
+    this.countdownAliasMsg = 'Ended!';
+  }
 }
