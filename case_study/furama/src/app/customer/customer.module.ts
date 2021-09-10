@@ -20,7 +20,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     CommonModule,
     RouterModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class CustomerModule {

@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {CustomerServiceService} from "../customer-service.service";
 
 @Component({
   selector: 'app-customer-create',
@@ -10,20 +11,20 @@ export class CustomerCreateComponent implements OnInit {
 
   createCustomer!: FormGroup;
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder, private customerServiceService: CustomerServiceService) {
   }
 
   ngOnInit(): void {
-    this.createCustomer = new FormGroup(
+    this.createCustomer = this.formBuilder.group(
       {
-        customerType: new FormControl(''),
-        customerName: new FormControl(''),
-        customerBirthday: new FormControl(''),
-        customerGender: new FormControl(''),
-        customerIdCard: new FormControl(''),
-        customerPhone: new FormControl(''),
-        customerEmail: new FormControl(''),
-        customerAddress: new FormControl(''),
+        customerType: ['',[Validators.required, Validators.pattern("^KH-\\d{4}$")]],
+        customerName: ["", Validators.required],
+        customerBirthday: ["", Validators.required],
+        customerGender: ["", Validators.required],
+        customerIdCard: ["",[Validators.required, Validators.pattern("^(\\d{9}|\\d{12})")]],
+        customerPhone: ["", Validators.required, Validators.pattern("^(090|091|\\(84\\)\\+90|\\(84\\)\\+91)\\d{7}$")],
+        customerEmail: ["", Validators.required],
+        customerAddress: ["", Validators.required],
       }
     )
   }
