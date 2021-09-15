@@ -1,23 +1,129 @@
 {
-  "customer": [
+  "customerTypes": [
     {
-      "customerType": "Diamond",
-      "customerName": "Thuận ĐẶng",
-      "customerBirthday": "25/10/1997",
-      "customerGender": 1,
-      "customerIdCard": 123123123,
-      "customerPhone": 123123123,
-      "customerEmail": "thuan@gmail.com",
-      "customerAddress": "Da Nang"
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
     }
   ],
-  "employee": [
-
+  "customers": [
+    {
+      "id": 1,
+      "cus_id": "KH-0015",
+      "cus_type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "name": "Thuan",
+      "birthday": "2021-09-18",
+      "gender": "Nam",
+      "id_card": "123456789",
+      "phone": "0901231231",
+      "email": "thuan@gmail.com",
+      "address": "Đà Nẵng"
+    }
   ],
-  "service": [
-
+  "position": [
+    {
+      "id": 1,
+      "name": "Lễ tân"
+    },
+    {
+      "id": 2,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 3,
+      "name": "Chuyên viên"
+    },
+    {
+      "id": 4,
+      "name": "Giám sát"
+    },
+    {
+      "id": 5,
+      "name": "Quản lí"
+    },
+    {
+      "id": 6,
+      "name": "Giám đốc"
+    }
   ],
-  "contract": [
-
+  "education": [
+    {
+      "id": 1,
+      "name": "Trung cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại học"
+    },
+    {
+      "id": 4,
+      "name": "Sau đại học"
+    }
+  ],
+  "division": [
+    {
+      "id": 1,
+      "name": "Sale-Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Hành chính"
+    },
+    {
+      "id": 3,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 4,
+      "name": "Quản lí"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "emp_id": "NV-0001",
+      "position": {
+        "id": 1,
+        "name": "Lễ tân"
+      },
+      "education": {
+        "id": 4,
+        "name": "Sau đại học"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản lí"
+      },
+      "name": "Thuan",
+      "birthday": "1997-01-01",
+      "gender": "Male",
+      "id_card": "123456789",
+      "phone": "0915225252",
+      "email": "Thuan@gmail.com",
+      "address": "Da Nang",
+      "salary": 200000
+    }
   ]
 }
