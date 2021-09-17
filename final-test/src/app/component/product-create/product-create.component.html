@@ -1,0 +1,66 @@
+<div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-12 mt-2">
+      <div class="d-flex justify-content-center align-content-center">
+        <h1 style="font-family: Georgia; font-weight: bold">Create New Product</h1>
+      </div>
+    </div>
+    <div class="container" style="margin-left: 100px">
+      <div class="row">
+        <form [formGroup]="createForm" (ngSubmit)="create()" novalidate>
+          <div class="mt-4 row">
+            <label class="col-2 d-flex justify-content-center mt-2" style="font-weight: bold">Id Product: <span
+              style="color: red">*</span></label>
+            <input type="text" class="form-control col-5" formControlName="id" style="width: 500px;" placeholder="">
+          </div>
+          <div class="mt-3 row">
+            <label for="nameProduct" class="col-2 d-flex justify-content-center mt-2" style="font-weight: bold">Name
+              Product:<span style="color: red">*</span></label>
+            <input type="text" class="form-control col-5" id="nameProduct" formControlName="nameProduct"
+                   style="width: 500px" placeholder="ex: Iphone X">
+            <div *ngIf="getName?.invalid && (getName?.dirty|| getName?.touched)">
+              <div class="alert alert-danger mt-2" style="margin-left: 16%;width: 500px ;height: 50px"
+                   [hidden]="!getName?.errors?.required">
+                Name not null!!!
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 row">
+            <label for="typeProduct" class="col-2 d-flex justify-content-center mt-2" style="font-weight: bold">Type
+              Product:<span style="color: red">*</span></label>
+            <select class="form-control col-5" id="typeProduct" formControlName="typeProduct" style="width: 500px">
+              <option value="" selected>Choose one...</option>
+              <ng-container *ngFor="let productType of listProductType">
+                <option [ngValue]="productType">{{productType.productTypeName}}</option>
+              </ng-container>
+            </select>
+            <div *ngIf="getTypeProduct?.invalid && (getTypeProduct?.dirty|| getTypeProduct?.touched)">
+              <div class="alert alert-danger mt-2" style="margin-left: 16%;width: 500px ;height: 50px"
+                   [hidden]="!getTypeProduct?.errors?.required">
+                Product Type is not selected!!!
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 row">
+            <label for="price" class="col-2 d-flex justify-content-center mt-2" style="font-weight: bold">Price Product:<span
+              style="color: red">*</span></label>
+            <input type="text" class="form-control col-5" id="price" formControlName="price" style="width: 500px"
+                   placeholder="ex: 999">
+            <div *ngIf="getPrice?.invalid && (getPrice?.dirty|| getPrice?.touched)">
+              <div class="alert alert-danger mt-2" style="margin-left: 16%;width: 500px ;height: 50px"
+                   [hidden]="!getPrice?.errors?.required">
+                Price not null & not letter & price > 50 !!!
+              </div>
+            </div>
+          </div>
+          <div class="mt-5" style="margin-left: 44%">
+            <button class="btn-sm btn-primary"
+                    style="font-weight: bolder; width: 120px; height: 35px; text-align: center" type="submit">Create
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

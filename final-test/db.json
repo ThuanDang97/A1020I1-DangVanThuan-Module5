@@ -1,0 +1,49 @@
+{
+  "product": [
+    {
+      "id": 2,
+      "nameProduct": "SamSung Note 20",
+      "typeProduct": {
+        "id": 2,
+        "productTypeName": "SamSung"
+      },
+      "price": 400
+    },
+    {
+      "id": 3,
+      "nameProduct": "iphone 2",
+      "typeProduct": {
+        "id": 1,
+        "productTypeName": "Apple"
+      },
+      "price": "800"
+    },
+    {
+      "id": 5,
+      "nameProduct": "Iphone 150",
+      "typeProduct": {
+        "id": 1,
+        "productTypeName": "Apple"
+      },
+      "price": "123123"
+    }
+  ],
+  "productType": [
+    {
+      "id": 1,
+      "productTypeName": "Apple"
+    },
+    {
+      "id": 2,
+      "productTypeName": "SamSung"
+    },
+    {
+      "id": 3,
+      "productTypeName": "Xiaomi"
+    },
+    {
+      "id": 4,
+      "productTypeName": "Oppo"
+    }
+  ]
+}
